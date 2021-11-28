@@ -29,11 +29,11 @@ func sign(c *gin.Context) {
 输入username, password(Query) 在user表中查询
 若用户名不存在 则注册成功 同时将用户名和密码 写入数据库user表
 
-![sign注册成功](D:\GoProjects\src\csa_4\测试图\sign注册成功.png)
+![sign注册成功](.\测试图\sign注册成功.png)
 
 若用户名存在  提示：用户名已存在
 
-![sign注册失败](D:\GoProjects\src\csa_4\测试图\sign注册失败.png)
+![sign注册失败](.\测试图\sign注册失败.png)
 
 ### 2.登录 127.0.0.1:9090/login  post请求
 
@@ -67,11 +67,11 @@ func login(c *gin.Context) {
 输入username, password(Query) 在user表中查询
 若查询失败   提示：用户名或密码错误
 
-![login登录失败](D:\GoProjects\src\csa_4\测试图\login登录失败.png)
+![login登录失败](.\测试图\login登录失败.png)
 
 若查询成功   提示：登录成功
 
-![login登录成功](D:\GoProjects\src\csa_4\测试图\login登录成功.png)
+![login登录成功](.\测试图\login登录成功.png)
 
 
 
@@ -101,11 +101,11 @@ func mid() gin.HandlerFunc {
 读取cookie数据
 若有      提示：username你好！
 
-![home登录后](D:\GoProjects\src\csa_4\测试图\home登录后.png)
+![home登录后](.\测试图\home登录后.png)
 
 若无      提示：游客你好！
 
-![home未登录时](D:\GoProjects\src\csa_4\测试图\home未登录时.png)
+![home未登录时](.\测试图\home未登录时.png)
 
 4.发表文章 127.0.0.1:9090/post  post请求
 
@@ -152,16 +152,16 @@ func postBlog(c *gin.Context) {
 读取cookie数据
 若无               提示：请先登录！ 并返回
 
-![post未登录时](D:\GoProjects\src\csa_4\测试图\post未登录时.png)
+![post未登录时](.\测试图\post未登录时.png)
 
 输入title, content(Query)
 若title, content为空       提示：title or content 为空 并返回
 
-![post登录后发表文章失败](D:\GoProjects\src\csa_4\测试图\post登录后发表文章失败.png)
+![post登录后发表文章失败](.\测试图\post登录后发表文章失败.png)
 
 title, content都不为空,则将cookie中读取的value, title, content写入数据库blog表中 
 
-![post登录后发表文章成功](D:\GoProjects\src\csa_4\测试图\post登录后发表文章成功.png)
+![post登录后发表文章成功](.\测试图\post登录后发表文章成功.png)
 
 
 
@@ -224,21 +224,21 @@ func likeOther(c *gin.Context) {
 读取cookie数据
 若无               提示：请先登录！
 
-![favor未登录时](D:\GoProjects\src\csa_4\测试图\favor未登录时.png)
+![favor未登录时](.\测试图\favor未登录时.png)
 
 输入username, title(Query)
 若username与cookie中value相同   提示：你不能给自己点赞！  并返回
 
-![favor点赞失败1](D:\GoProjects\src\csa_4\测试图\favor点赞失败1.png)
+![favor点赞失败1](.\测试图\favor点赞失败1.png)
 
 在数据库blog表中查询username, title
 若查询失败            提示：点赞失败！文章不存在！ 并返回
 
-![favor点赞失败2](D:\GoProjects\src\csa_4\测试图\favor点赞失败2.png)
+![favor点赞失败2](.\测试图\favor点赞失败2.png)
 
 若查询成功 将blog表中对应的favor++     提示：给username点赞成功
 
-![favor点赞成功](D:\GoProjects\src\csa_4\测试图\favor点赞成功.png)
+![favor点赞成功](.\测试图\favor点赞成功.png)
 
 
 
