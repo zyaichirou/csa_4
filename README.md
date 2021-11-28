@@ -1,4 +1,4 @@
-# 博客系统   //图片加载不出来请看README.pdf
+# 博客系统
 
 ## 功能：主页、注册、登录、发表文章、为文章点赞
 
@@ -241,4 +241,14 @@ func likeOther(c *gin.Context) {
 ![favor点赞成功](D:\GoProjects\src\csa_4\测试图\favor点赞成功.png)
 
 
+
+## 数据库表
+
+user表
+
+![image-20211128185425763](C:\Users\zyaic\AppData\Roaming\Typora\typora-user-images\image-20211128185425763.png)
+
+blog表
+
+![image-20211128185453878](C:\Users\zyaic\AppData\Roaming\Typora\typora-user-images\image-20211128185453878.png)
 
